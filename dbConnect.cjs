@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 require("dotenv").config({ path: "./config.env" }); //requires the config file
 const express = require("express");
 
-const port = process.env.PORT;
 const app = express();
 
 app.use("/users", require("./routeusers")); //this whole code allows CORS
@@ -33,7 +32,5 @@ async function main() {
     process.exit(1);
   }
 }
-
-app.listen(port, () => console.log("Server has started"));
 
 main();
