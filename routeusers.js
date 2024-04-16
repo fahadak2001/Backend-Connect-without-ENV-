@@ -70,8 +70,10 @@ router.route("/login").post(async (req, res) => {
     });
 });
 
-router.route("/auth-endpoint", auth).get((request, response) => {
-  response.json({ message: "You are authorized to access me" });
-});
+router.route("/auth-endpoint")
+  .get(auth, (request, response) => {
+    response.json({ message: "You are authorized to access me" });
+  });
+
 
 module.exports = router;
