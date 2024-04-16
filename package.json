@@ -11,6 +11,6 @@
   },
   "name": "my-project",
   "scripts": {
-    "start": "node server.js"
+    "start": "node dbConnect.cjs"
   }
 }
