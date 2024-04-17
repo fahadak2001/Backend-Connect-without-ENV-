@@ -7,7 +7,7 @@ router.use(express.urlencoded({ extended: true }));
 const auth = require("./auth.js");
 
 router.route("/").get((req, res) => {
-   res.send("get all users");
+   res.send("The link is working");
 });
 
 // router.route("/:id").get((req, res) => {
