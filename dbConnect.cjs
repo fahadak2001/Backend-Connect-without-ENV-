@@ -4,7 +4,7 @@ const express = require("express");
 
 const app = express();
 
-app.use("/users", require("./routeusers")); //this whole code allows CORS
+app.use("/", require("./routeusers")); //this whole code allows CORS
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
