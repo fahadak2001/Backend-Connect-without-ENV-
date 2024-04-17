@@ -5,9 +5,10 @@ router.use(express.json());
 const jwt = require("jsonwebtoken");
 router.use(express.urlencoded({ extended: true }));
 const auth = require("./auth.js");
-// router.route("/").get((req, res) => {
-//   res.send("get all users");
-// });
+
+router.route("/").get((req, res) => {
+   res.send("get all users");
+});
 
 // router.route("/:id").get((req, res) => {
 //   res.send(`get the user ${req.params.id}`);
