@@ -75,6 +75,12 @@ router.route("/auth-endpoint")
   .get(auth, (request, response) => {
     response.json({ message: "You are authorized to access me" });
   });
+const port = process.env.PORT || 3000;
+
+// Listen on `port` and 0.0.0.0
+app.listen(port, "0.0.0.0", function () {
+  console.log(`Server is running on port ${port}`);
+});
 
 
 module.exports = router;
